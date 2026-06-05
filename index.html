@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+
 <html lang="id">
 <head>
 <meta charset="UTF-8">
@@ -6,18 +7,12 @@
 <title>For My Favorite Person ❤️</title>
 
 <style>
-
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:Arial,sans-serif;
-}
-
 body{
+margin:0;
+font-family:Arial,sans-serif;
 background:linear-gradient(135deg,#ffd6e7,#fff0f5);
-overflow-x:hidden;
 text-align:center;
+overflow-x:hidden;
 }
 
 .container{
@@ -33,25 +28,18 @@ border:8px solid white;
 box-shadow:0 10px 25px rgba(0,0,0,.2);
 }
 
-h1{
+h1,h2{
 color:#ff4f8b;
-margin-top:20px;
 }
 
-h2{
-color:#ff4f8b;
-margin:20px 0;
-}
-
-.btn{
+button{
 background:#ff4f8b;
 color:white;
 border:none;
 padding:15px 30px;
 border-radius:30px;
-font-size:16px;
 cursor:pointer;
-margin-top:20px;
+font-size:16px;
 }
 
 .letter{
@@ -62,7 +50,7 @@ margin:30px auto;
 padding:30px;
 border-radius:20px;
 box-shadow:0 10px 25px rgba(0,0,0,.15);
-line-height:1.9;
+line-height:1.8;
 text-align:left;
 }
 
@@ -91,8 +79,8 @@ to{
 transform:translateY(110vh);
 }
 }
-
 </style>
+
 </head>
 
 <body>
@@ -109,63 +97,60 @@ transform:translateY(110vh);
 
 <h2>Happy Birthday Chikaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa 🎂</h2>
 
-<p>
-09 Juni 2026
-</p>
+<p>09 Juni 2026</p>
 
-<button class="btn" onclick="openLetter()">
+<br>
+
+<button onclick="openLetter()">
 Buka Surat ❤️
 </button>
 
 <div class="letter" id="letter">
-  <div class="letter" id="letter">
-    <h2>Untuk Chika ❤️</h2>
+
+<h2>Untuk Chika ❤️</h2>
 
 <p>
 Happy Birthday Chikaaaaaa AP FISIP UNY, makasihh yaa udah jadi orang favoritkuuu, sebelumnya aku mau minta maaf dlu ke kamu soal masalah kita yang dulu semoga kamu maafin masalah itu yaa, aku sebenrnya udah kangen kamu dari lama kadang juga nge stalk kamu pas kita udahan dlu, aslinya aku juga nyeselllll parah 33x, dan ternyata habis itu aku deket sama 1 cewe dan ternyata ngga lama, soalnya apa? soalnya yang aku cari itu ada di kamu semua, chikaa yang lucuu, suka cerita hal hal random trus exited kalo ketemu, ngga ngebosenin tapi kadang bikin emosi aku tapi it's okey, semoga cita cita kamu jadi CAPO FISIP SEMUT MERAH KECAPAI YAAAAAAAAAAAAAA (Bercanda), semoga cita cita chikaa tercapai, patuh sama orang tua sama jangan lupa sayanggg aku lagi hehehe, sama aku mintaa maafff yaa belum bisa ke jogja di hari spesial kamuuu, tapi nanti aku usahain secepetnya ke jogja nemuin Chikaaaaaa, dijaga yaa kesehatannya anak rantau dari kaltim... gausah nakal di jogja kalo ada apa apa atau butuh bantuan kabarin aku aja selama aku bisa bantu pasti tetep aku bantuuu, LVV U CHIKAAAAAA❤️
 </p>
+
 </div>
 
 <h2>Galeri Kenangan 📸</h2>
 
 <div class="gallery">
-
 <img src="foto1.jpg">
 <img src="foto2.jpg">
 <img src="foto3.jpg">
 <img src="foto4.jpg">
 <img src="foto5.jpg">
-
 </div>
 
 </div>
 
 <script>
-
 function openLetter(){
 
 document.getElementById("letter").style.display="block";
 
-const music = document.getElementById("bgMusic");
+const music=document.getElementById("bgMusic");
 
 music.play();
 
 window.scrollTo({
-top: document.getElementById("letter").offsetTop,
-behavior: "smooth"
+top:document.getElementById("letter").offsetTop,
+behavior:"smooth"
 });
-
 }
 
 setInterval(function(){
 
-const heart = document.createElement("div");
+const heart=document.createElement("div");
 
-heart.className = "heart";
+heart.className="heart";
 
-heart.innerHTML = "❤️";
+heart.innerHTML="❤️";
 
-heart.style.left = Math.random() * 100 + "vw";
+heart.style.left=Math.random()*100+"vw";
 
 document.body.appendChild(heart);
 
@@ -174,7 +159,6 @@ heart.remove();
 },8000);
 
 },600);
-
 </script>
 
 </body>
