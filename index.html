@@ -10,46 +10,35 @@
 body{
 margin:0;
 font-family:Arial,sans-serif;
-background:linear-gradient(135deg,#ffd6e7,#fff0f5);
+background:#f8dce8;
 text-align:center;
 overflow-x:hidden;
 }
 
 .container{
-padding:40px 20px;
+padding:30px;
 }
 
 .profile{
-width:230px;
-height:230px;
+width:220px;
+height:220px;
 object-fit:cover;
 border-radius:50%;
 border:8px solid white;
-box-shadow:0 10px 25px rgba(0,0,0,.2);
+box-shadow:0 10px 20px rgba(0,0,0,.2);
 }
 
 h1,h2{
 color:#ff4f8b;
 }
 
-button{
-background:#ff4f8b;
-color:white;
-border:none;
-padding:15px 30px;
-border-radius:30px;
-cursor:pointer;
-font-size:16px;
-}
-
 .letter{
-display:none;
 background:white;
 max-width:900px;
 margin:30px auto;
 padding:30px;
 border-radius:20px;
-box-shadow:0 10px 25px rgba(0,0,0,.15);
+box-shadow:0 10px 20px rgba(0,0,0,.15);
 line-height:1.8;
 text-align:left;
 }
@@ -85,7 +74,7 @@ transform:translateY(110vh);
 
 <body>
 
-<audio id="bgMusic" loop>
+<audio controls autoplay loop>
 <source src="music.mp3" type="audio/mpeg">
 </audio>
 
@@ -99,13 +88,7 @@ transform:translateY(110vh);
 
 <p>09 Juni 2026</p>
 
-<br>
-
-<button onclick="openLetter()">
-Buka Surat ❤️
-</button>
-
-<div class="letter" id="letter">
+<div class="letter">
 
 <h2>Untuk Chika ❤️</h2>
 
@@ -128,20 +111,6 @@ Happy Birthday Chikaaaaaa AP FISIP UNY, makasihh yaa udah jadi orang favoritkuuu
 </div>
 
 <script>
-function openLetter(){
-
-document.getElementById("letter").style.display="block";
-
-const music=document.getElementById("bgMusic");
-
-music.play();
-
-window.scrollTo({
-top:document.getElementById("letter").offsetTop,
-behavior:"smooth"
-});
-}
-
 setInterval(function(){
 
 const heart=document.createElement("div");
@@ -158,7 +127,7 @@ setTimeout(function(){
 heart.remove();
 },8000);
 
-},600);
+},700);
 </script>
 
 </body>
