@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+
 <html lang="id">
 <head>
 <meta charset="UTF-8">
@@ -6,38 +7,32 @@
 <title>For My Favorite Person ❤️</title>
 
 <style>
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:Arial,sans-serif;
-}
-
 body{
-background:linear-gradient(135deg,#ffd6e7,#ffe8f2);
+margin:0;
+font-family:Arial,sans-serif;
+background:linear-gradient(135deg,#ffd6e7,#fff0f5);
 text-align:center;
 overflow-x:hidden;
 }
 
-section{
-padding:60px 20px;
+.container{
+padding:40px 20px;
 }
 
-.hero img{
+.profile{
 width:220px;
 height:220px;
 object-fit:cover;
 border-radius:50%;
 border:8px solid white;
-box-shadow:0 10px 30px rgba(0,0,0,.2);
+box-shadow:0 10px 25px rgba(0,0,0,.2);
 }
 
 h1{
 color:#ff4f8b;
-margin:20px 0;
 }
 
-button{
+.btn{
 background:#ff4f8b;
 color:white;
 padding:15px 30px;
@@ -49,9 +44,9 @@ font-size:16px;
 
 .letter{
 display:none;
-max-width:900px;
-margin:auto;
 background:white;
+max-width:850px;
+margin:30px auto;
 padding:30px;
 border-radius:20px;
 box-shadow:0 10px 25px rgba(0,0,0,.15);
@@ -73,8 +68,9 @@ border-radius:15px;
 .heart{
 position:fixed;
 top:-20px;
-font-size:20px;
+font-size:22px;
 animation:fall 8s linear forwards;
+pointer-events:none;
 }
 
 @keyframes fall{
@@ -83,48 +79,40 @@ transform:translateY(110vh);
 }
 }
 </style>
+
 </head>
 
 <body>
 
-<audio autoplay loop>
+<audio id="bgMusic" loop>
 <source src="music.mp3" type="audio/mpeg">
 </audio>
 
-<section class="hero">
+<div class="container">
 
-<img src="foto1.jpg">
+<img src="foto1.jpg" class="profile">
 
 <h1>For My Favorite Person ❤️</h1>
 
 <h2>Happy Birthday Chikaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa 🎂</h2>
 
-<p style="margin-top:15px;">
-09 Juni 2026
-</p>
+<p>09 Juni 2026</p>
 
 <br>
 
-<button onclick="openLetter()">
+<button class="btn" onclick="openLetter()">
 Buka Surat ❤️
 </button>
-
-</section>
-
-<section>
 
 <div class="letter" id="letter">
 
 <h2>Untuk Chika ❤️</h2>
 
 <p>
-Happy Birthday Chikaaaaaa AP FISIP UNY,
-makasihh yaa udah jadi orang favoritkuuu.
+Happy Birthday Chikaaaaaa AP FISIP UNY, makasihh yaa udah jadi orang favoritkuuu.
 Sebelumnya aku mau minta maaf dulu soal masalah kita yang dulu,
 semoga kamu maafin masalah itu yaa.
 </p>
-
-<br>
 
 <p>
 Aku sebenarnya udah kangen kamu dari lama,
@@ -132,72 +120,56 @@ kadang juga nge-stalk kamu pas kita udahan dulu.
 Aslinya aku juga nyesel parah 33x.
 </p>
 
-<br>
-
 <p>
-Dan ternyata habis itu aku deket sama satu cewe,
+Dan ternyata habis itu aku sempat deket sama satu cewe,
 tapi nggak lama.
-Soalnya yang aku cari itu ada di kamu semua.
-Chika yang lucu, suka cerita hal-hal random,
+Karena yang aku cari ternyata ada di kamu semua.
+Chika yang lucu, suka cerita hal random,
 selalu excited kalau ketemu,
 nggak ngebosenin,
-walaupun kadang bikin emosi aku,
-tapi it's okay ❤️
+dan tetap jadi orang favoritku ❤️
 </p>
-
-<br>
 
 <p>
 Semoga cita-cita Chika tercapai,
-semoga selalu sehat,
+sehat selalu,
 bahagia,
 patuh sama orang tua,
 dan jangan lupa sayang aku lagi hehehe.
 </p>
 
-<br>
-
 <p>
 Maaf ya belum bisa ke Jogja di hari spesial kamu.
-Tapi aku usahain secepetnya ke Jogja buat nemuin Chikaaaaaa.
+Tapi aku usahain secepatnya ke sana buat nemuin Chikaaaaaa.
 Jaga kesehatan ya anak rantau dari Kaltim.
-Jangan nakal di Jogja.
 Kalau ada apa-apa atau butuh bantuan,
 kabarin aku aja.
-Selama aku bisa bantu,
-aku pasti bantu.
 </p>
 
-<br>
-
-<h2>
-LVV U CHIKAAAAAA ❤️
-</h2>
+<h2>LVV U CHIKAAAAAA ❤️</h2>
 
 </div>
-
-</section>
-
-<section>
 
 <h2>Galeri Kenangan 📸</h2>
 
 <div class="gallery">
-
 <img src="foto1.jpg">
 <img src="foto2.jpg">
 <img src="foto3.jpg">
 <img src="foto4.jpg">
 <img src="foto5.jpg">
+</div>
 
 </div>
 
-</section>
-
 <script>
-
 function openLetter(){
+
 document.getElementById("letter").style.display="block";
+
+const music=document.getElementById("bgMusic");
+
+music.play();
 
 window.scrollTo({
 top:document.getElementById("letter").offsetTop,
@@ -205,9 +177,9 @@ behavior:"smooth"
 });
 }
 
-setInterval(()=>{
+setInterval(function(){
 
-let heart=document.createElement("div");
+const heart=document.createElement("div");
 
 heart.className="heart";
 
@@ -217,12 +189,11 @@ heart.style.left=Math.random()*100+"vw";
 
 document.body.appendChild(heart);
 
-setTimeout(()=>{
+setTimeout(function(){
 heart.remove();
 },8000);
 
-},500);
-
+},600);
 </script>
 
 </body>
