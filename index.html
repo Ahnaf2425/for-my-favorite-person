@@ -7,8 +7,13 @@
 <title>For My Favorite Person ❤️</title>
 
 <style>
-body{
+*{
 margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
 font-family:Arial,sans-serif;
 background:#f8dce8;
 text-align:center;
@@ -16,7 +21,7 @@ overflow-x:hidden;
 }
 
 .container{
-padding:30px;
+padding:30px 20px;
 }
 
 .profile{
@@ -28,24 +33,53 @@ border:8px solid white;
 box-shadow:0 10px 20px rgba(0,0,0,.2);
 }
 
-h1,h2{
+h1{
+margin-top:20px;
+font-size:50px;
 color:#ff4f8b;
 }
 
+h2{
+color:#ff4f8b;
+margin:20px 0;
+}
+
+.date{
+font-size:18px;
+margin-bottom:20px;
+}
+
+button{
+background:#ff4f8b;
+color:white;
+border:none;
+padding:15px 35px;
+font-size:18px;
+border-radius:30px;
+cursor:pointer;
+margin-bottom:30px;
+}
+
+button:hover{
+opacity:0.9;
+}
+
 .letter{
+display:none;
 background:white;
-max-width:900px;
+max-width:950px;
 margin:30px auto;
-padding:30px;
-border-radius:20px;
+padding:35px;
+border-radius:25px;
 box-shadow:0 10px 20px rgba(0,0,0,.15);
-line-height:1.8;
 text-align:left;
+line-height:1.9;
+font-size:18px;
 }
 
 .gallery{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
 gap:15px;
 margin-top:30px;
 }
@@ -58,9 +92,10 @@ border-radius:15px;
 .heart{
 position:fixed;
 top:-20px;
-font-size:22px;
+font-size:25px;
 animation:fall 8s linear forwards;
 pointer-events:none;
+z-index:999;
 }
 
 @keyframes fall{
@@ -74,7 +109,7 @@ transform:translateY(110vh);
 
 <body>
 
-<audio controls autoplay loop>
+<audio id="bgMusic" loop>
 <source src="music.mp3" type="audio/mpeg">
 </audio>
 
@@ -84,11 +119,17 @@ transform:translateY(110vh);
 
 <h1>For My Favorite Person ❤️</h1>
 
-<h2>Happy Birthday Chikaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa 🎂</h2>
+<h2>
+Happy Birthday Chikaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa 🎂
+</h2>
 
-<p>09 Juni 2026</p>
+<p class="date">09 Juni 2026</p>
 
-<div class="letter">
+<button onclick="openLetter()">
+💌 Buka Surat ❤️
+</button>
+
+<div class="letter" id="letter">
 
 <h2>Untuk Chika ❤️</h2>
 
@@ -111,6 +152,21 @@ Happy Birthday Chikaaaaaa AP FISIP UNY, makasihh yaa udah jadi orang favoritkuuu
 </div>
 
 <script>
+
+function openLetter(){
+
+document.getElementById("letter").style.display="block";
+
+const music=document.getElementById("bgMusic");
+
+music.play();
+
+document.getElementById("letter").scrollIntoView({
+behavior:"smooth"
+});
+
+}
+
 setInterval(function(){
 
 const heart=document.createElement("div");
@@ -128,6 +184,7 @@ heart.remove();
 },8000);
 
 },700);
+
 </script>
 
 </body>
