@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-
 <html lang="id">
 <head>
 <meta charset="UTF-8">
@@ -7,9 +6,14 @@
 <title>For My Favorite Person ❤️</title>
 
 <style>
-body{
+*{
 margin:0;
+padding:0;
+box-sizing:border-box;
 font-family:Arial,sans-serif;
+}
+
+body{
 background:linear-gradient(135deg,#ffd6e7,#fff0f5);
 text-align:center;
 overflow-x:hidden;
@@ -20,8 +24,8 @@ padding:40px 20px;
 }
 
 .profile{
-width:220px;
-height:220px;
+width:230px;
+height:230px;
 object-fit:cover;
 border-radius:50%;
 border:8px solid white;
@@ -30,6 +34,12 @@ box-shadow:0 10px 25px rgba(0,0,0,.2);
 
 h1{
 color:#ff4f8b;
+margin:20px 0;
+}
+
+h2{
+color:#ff4f8b;
+margin:20px 0;
 }
 
 .btn{
@@ -45,12 +55,13 @@ font-size:16px;
 .letter{
 display:none;
 background:white;
-max-width:850px;
+max-width:900px;
 margin:30px auto;
 padding:30px;
 border-radius:20px;
 box-shadow:0 10px 25px rgba(0,0,0,.15);
 line-height:1.8;
+text-align:left;
 }
 
 .gallery{
@@ -79,7 +90,6 @@ transform:translateY(110vh);
 }
 }
 </style>
-
 </head>
 
 <body>
@@ -105,49 +115,11 @@ Buka Surat ❤️
 </button>
 
 <div class="letter" id="letter">
-
-<h2>Untuk Chika ❤️</h2>
-
-<p>
-Happy Birthday Chikaaaaaa AP FISIP UNY, makasihh yaa udah jadi orang favoritkuuu.
-Sebelumnya aku mau minta maaf dulu soal masalah kita yang dulu,
-semoga kamu maafin masalah itu yaa.
-</p>
+  <h2>Untuk Chika ❤️</h2>
 
 <p>
-Aku sebenarnya udah kangen kamu dari lama,
-kadang juga nge-stalk kamu pas kita udahan dulu.
-Aslinya aku juga nyesel parah 33x.
+Happy Birthday Chikaaaaaa AP FISIP UNY, makasihh yaa udah jadi orang favoritkuuu, sebelumnya aku mau minta maaf dlu ke kamu soal masalah kita yang dulu semoga kamu maafin masalah itu yaa, aku sebenrnya udah kangen kamu dari lama kadang juga nge stalk kamu pas kita udahan dlu, aslinya aku juga nyeselllll parah 33x, dan ternyata habis itu aku deket sama 1 cewe dan ternyata ngga lama, soalnya apa? soalnya yang aku cari itu ada di kamu semua, chikaa yang lucuu, suka cerita hal hal random trus exited kalo ketemu, ngga ngebosenin tapi kadang bikin emosi aku tapi it's okey, semoga cita cita kamu jadi CAPO FISIP SEMUT MERAH KECAPAI YAAAAAAAAAAAAAA (Bercanda), semoga cita cita chikaa tercapai, patuh sama orang tua sama jangan lupa sayanggg aku lagi hehehe, sama aku mintaa maafff yaa belum bisa ke jogja di hari spesial kamuuu, tapi nanti aku usahain secepetnya ke jogja nemuin Chikaaaaaa, dijaga yaa kesehatannya anak rantau dari kaltim... gausah nakal di jogja kalo ada apa apa atau butuh bantuan kabarin aku aja selama aku bisa bantu pasti tetep aku bantuuu, LVV U CHIKAAAAAA❤️
 </p>
-
-<p>
-Dan ternyata habis itu aku sempat deket sama satu cewe,
-tapi nggak lama.
-Karena yang aku cari ternyata ada di kamu semua.
-Chika yang lucu, suka cerita hal random,
-selalu excited kalau ketemu,
-nggak ngebosenin,
-dan tetap jadi orang favoritku ❤️
-</p>
-
-<p>
-Semoga cita-cita Chika tercapai,
-sehat selalu,
-bahagia,
-patuh sama orang tua,
-dan jangan lupa sayang aku lagi hehehe.
-</p>
-
-<p>
-Maaf ya belum bisa ke Jogja di hari spesial kamu.
-Tapi aku usahain secepatnya ke sana buat nemuin Chikaaaaaa.
-Jaga kesehatan ya anak rantau dari Kaltim.
-Kalau ada apa-apa atau butuh bantuan,
-kabarin aku aja.
-</p>
-
-<h2>LVV U CHIKAAAAAA ❤️</h2>
-
 </div>
 
 <h2>Galeri Kenangan 📸</h2>
@@ -163,6 +135,7 @@ kabarin aku aja.
 </div>
 
 <script>
+
 function openLetter(){
 
 document.getElementById("letter").style.display="block";
@@ -175,6 +148,7 @@ window.scrollTo({
 top:document.getElementById("letter").offsetTop,
 behavior:"smooth"
 });
+
 }
 
 setInterval(function(){
@@ -194,6 +168,7 @@ heart.remove();
 },8000);
 
 },600);
+
 </script>
 
 </body>
